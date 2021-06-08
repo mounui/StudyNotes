@@ -1,5 +1,8 @@
 <!-- _sidebar.md -->
 
 * [学习笔记](/)
-* [指南](zh-cn/guide)
 * [文档生成器](/DocType/)
+* [Golang](/Golang/)
+	* [Go语言简介](/Golang/Go语言简介)
+	* [Go语言环境安装](/Golang/Go语言环境安装)
+	* [Go语言结构](/Golang/Go语言结构)
