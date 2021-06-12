@@ -26,7 +26,3 @@ npm ERR! gyp ERR! find VS ******************************************************
 ```
 
 根据上面错误提示提到的关于Visual Studio地址去查看具体[文档](https://github.com/nodejs/node-gyp#on-windows)，然后根据自己的系统去解决。
-
-这里我使用的是windows，因此我安装了`Visual Studio Build Tools`，然后从新执行`docsify-cli`安装命令就好了。
-
-!> 使用`Visual Studio Installer`安装`Visual Studio 2019`然后打开CMD执行`npm config set msvs_version 2019`
