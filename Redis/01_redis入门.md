@@ -38,6 +38,7 @@ NoSQL：即 Not-Only SQL（ 泛指非关系型的数据库），作为关系型�
 - 散列类型			hash
 - 集合类型			set
 - 有序集合类型		sorted_set
+
 5. 持久化支持。可以进行数据灾难恢复
 
 #### Redis的应用
@@ -46,9 +47,7 @@ NoSQL：即 Not-Only SQL（ 泛指非关系型的数据库），作为关系型�
 
 - 任务队列，如秒杀、抢购、购票排队等
 
-- 即时信息查询，如各位排行榜、各类网站访问统计、公交到站信息、在线人数信息（聊天室、网站）、设
-
-- 时效性信息控制，如验证码控制、投票控制等
+- 即时信息查询，如各位排行榜、各类网站访问统计、公交到站信息、在线人数信息（聊天室、网站）、设时效性信息控制，如验证码控制、投票控制等
 
 - 分布式数据共享，如分布式集群架构中的 session 分离
 
@@ -69,15 +68,15 @@ NoSQL：即 Not-Only SQL（ 泛指非关系型的数据库），作为关系型�
 信息添加：设置 key，value 数据
 
 ```redis
-set key value	# 命令
-set name redis	# 示例
+set key value	// 命令
+set name redis	// 示例
 ```
 
 信息查询：根据 key 查询对应的 value，如果不存在，返回空（nil）
 
 ```redis
-get key		# 命令
-get name	# 示例
+get key		// 命令
+get name	// 示例
 ```
 
 清除屏幕信息 `clear`
@@ -87,9 +86,10 @@ get name	# 示例
 帮助：获取命令帮助文档，获取组中所有命令信息名称
 
 ```redis
-help # 查看帮助信息
+help // 查看帮助信息
 help 命令名称
 help @组名
 ```
 
 ![2021-06-18_083819](https://gitee.com/mounui/PicBed/raw/master/notebook/2021-06-18_083819.png)
+
