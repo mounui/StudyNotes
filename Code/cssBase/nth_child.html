@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nth-child</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			background-color: #eee;
+		}
+		p:nth-child(2) {
+			background: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<span>test</span>
+	<h1>请调整浏览器窗口大小以查看效果！</h1>
+	<p>默认情况下，文档的背景色为棕褐色。如果屏幕尺寸为 992px 或更小，则颜色将变为蓝色。如果小于或等于 600px，它将变为橄榄色。</p>
+	<div class="column">
+		<h1>Column 1</h1>
+		<p>Some text...</p>
+	</div>
+	<div class="column">
+		<h1>Column 2</h1>
+		<p>Some text...</p>
+	</div>
+	<div class="column">
+		<h1>Column 3</h1>
+		<p>Some text...</p>
+	</div>
+	<div class="column">
+		<h1>Column 4</h1>
+		<p>Some text...</p>
+	</div>
+</body>
+</html>

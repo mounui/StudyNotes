@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML 本地存储</title>
+</head>
+<body>
+	<section>
+		<h2>html本地存储</h2>
+		<p id="result"></p>
+		<button id="number" onclick="clickcount()">点击</button>
+	</section>
+	<script>
+		if (typeof(Worker) !== "undefined") {
+			document.write('支持Worker');
+		}
+		if (typeof(Storage) !== "undefined") {
+			document.write('支持本地存储');
+			// 存储数据
+			localStorage.setItem('lastname','mao');
+			// 取回数据
+			document.getElementById('result').innerHTML = localStorage.getItem('lastname');
+			// 点击按钮计数
+			function clickcount() {
+				if (localStorage.cnum) {
+					localStorage.cnum = Number(localStorage.cnum) + 1;
+				} else {
+					localStorage.cnum = 1;
+				}
+				document.getElementById('number').innerHTML = '点击' + localStorage.cnum + '次';
+			}
+		} else {
+			document.write('不支持本地存储');
+		}
+	</script>
+</body>
+</html>

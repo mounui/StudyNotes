@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS工具提示</title>
+	<style>
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -60px;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 1s;
+		}
+		.tooltip .tooltiptext::after {
+			content: " ";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: black transparent transparent transparent;
+		}
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<p>请把鼠标移到下面的文字上：</p>
+
+	<div class="tooltip">移到我上面
+	  <span class="tooltiptext">工具提示文本</span>
+	</div>
+
+	<p>请注意，工具提示文本的位置不是很好。请返回教程并继续阅读如何以理想的方式放置工具提示。</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS边框图像</title>
+	<style>
+		#borderimg {
+			border: 10px solid transparent;
+			padding: 15px;
+			border-image: url(../images/tb.png) 30 round;
+		}
+	</style>
+</head>
+<body>
+	<h1>border-image 属性</h1>
+
+	<p>在这里，重复图像的中间部分，来创建边框：</p>
+	<p id="borderimg">border-image: url(border.png) 30 round;</p>
+
+	<p>这是原始图像：</p><img src="../images/tb.png">
+	<p><b>注释：</b>Internet Explorer 10 以及更早的版本不支持 border-image 属性。</p>
+</body>
+</html>

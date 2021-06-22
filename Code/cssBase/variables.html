@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS变量</title>
+	<style>
+		:root {
+			--blue: #1e90ff;
+			--white: #ffffff;
+		}
+		body { background-color: var(--blue); }
+		h2 { border-bottom: 2px solid var(--blue); }
+		.container {
+			--fontsize: 25px;
+			color: var(--blue);
+			background-color: var(--white);
+			padding: 15px;
+			font-size: var(--fontsize);
+		}
+		button {
+			--blue: #0000ff;
+			--button-red: #f00;
+			background-color: var(--white);
+			color: var(--blue);
+			border: 1px solid var(--button-red);
+			padding: 5px;
+		}
+
+		@media screen and (min-width: 450px) {
+			.container {
+				--fontsize: 50px;
+			}
+			:root {
+				--blue: lightpink;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>使用 var() 函数</h1>
+	<div class="container">
+	  <h2>Welcome to Shanghai!</h2>
+	  <p>Shanghai is one of the four direct-administered municipalities of the People's Republic of China.</p>
+	  <p>Shanghai is one of the four direct-administered municipalities of the People's Republic of China.</p>
+	  <p>
+	    <button id="yes">Yes</button>
+	    <button>No</button>
+	  </p>
+	</div>
+	<script>
+		// 获取根元素
+		var r = document.querySelector(':root');
+		// 获取变量值的函数
+		function myFunction_get() {
+			var rs = getComputedStyle(r);
+			alert('The value of --blue is: '+ rs.getPropertyValue('--blue'));
+		}
+		// 创建设置变量值得函数
+		function myFunction_set() {
+			r.style.setProperty('--blue','green');
+		}
+		var btn_yes = document.getElementById('yes');
+		btn_yes.onclick = function() {
+			myFunction_get();
+			myFunction_set();
+		};
+	</script>
+</body>
+</html>

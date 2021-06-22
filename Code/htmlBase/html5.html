@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styling HTML5</title>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<body>
+    <h1>My First Article</h1>
+    <article>
+        London is the capital city of England.
+        It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.
+    </article>
+    <main>
+    	<section>
+    		<h2>HTML5中的语义元素</h2>
+    		<table border="1" cellspacing="0" cellpadding="5">
+    			<tr>
+    				<th>标签</th>
+    				<th>描述</th>
+    			</tr>
+    			<tr>
+    				<td>&lt;article&gt;</td>
+    				<td>定义文章</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;aside&gt;</td>
+    				<td>定义页面内容以外的内容</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;details&gt;</td>
+    				<td>定义用户能够查看或隐藏的额外细节</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;figure&gt;</td>
+    				<td>规定自包含内容，比如图片、图标、照片、代码清单等</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;figcaption&gt;</td>
+    				<td>定义figure元素的标题</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;footer&gt;</td>
+    				<td>定义文档或节的页脚</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;header&gt;</td>
+    				<td>定义文档或节的页眉</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;main&gt;</td>
+    				<td>规定文档的主内容</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;mark&gt;</td>
+    				<td>定义重要的或强调的文本</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;nav&gt;</td>
+    				<td>定义导航链接</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;section&gt;</td>
+    				<td>定义文档中的节</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;summary&gt;</td>
+    				<td>定义details元素的可见标题</td>
+    			</tr>
+    			<tr>
+    				<td>&lt;time&gt;</td>
+    				<td>定义日期时间</td>
+    			</tr>
+    		</table>
+    	</section>
+        <section>
+            <h2>HTML音频</h2>
+            <div id="audio">
+                <audio controls="controls" height="100" width="100">
+                    <source src="song.mp3" type="audio/mp3" />
+                    <source src="song.ogg" type="audio/ogg" />
+                    <embed src="song.mp3" height="100" width="100">
+                </audio>
+            </div>
+        </section>
+        <section>
+            <h2>HTML视频</h2>
+            <div id="video">
+                <video controls="controls" height="240" width="340">
+                    <source src="movie.mp4" type="video/mp4" />
+                    <source src="movie.ogg" type="video/ogg" />
+                    <source src="movie.webm" type="video/webm" />
+                    <object data="movie.mp4" width="320" height="240">
+                        <embed src="movie.swf" width="320" height="240" />
+                    </object>
+                </video>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

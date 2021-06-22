@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hello javascript</title>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+<body>
+	<h2>提示消息</h2>
+	<p>创建一个页面，然后显示一个消息 “I’m JavaScript!”。</p>
+	<!-- <script src="hello.js"></script> -->
+	<script>
+		/*let userName = prompt('请输入您的用户名');
+		if (userName === null) {
+			alert('Canceled');
+		} else if (userName == 'Admin') {
+			let password = prompt('请输入您的密码');
+			if (password === null || password === '') {
+				alert('Canceled');
+			} else if (password == 'TheMaster') {
+				alert('Welcome!');
+			} else {
+				alert('Wrong password');
+			}
+		} else {
+			alert("I don't know you");
+		}*/
+		let isEmpty = function(obj) {
+			for(let key in obj) {
+				return false;
+			}
+			return true;
+		};
+		function multiplyNumeric(obj) {
+			for(let key in obj) {
+				if (typeof obj[key] == 'number') {
+					obj[key] *= 2;
+				}
+			}
+		}
+		function cloneObj(obj) {
+			let newObj = {};
+			if (typeof obj != 'object') return obj;
+			for(let key in obj) {
+				newObj[key] = cloneObj(obj[key]);
+			}
+			return newObj;
+		}
+		let user = {
+		  name: "John",
+		  sizes: {
+		    height: 182,
+		    width: 50
+		  }
+		};
+		let clone = cloneObj(user);
+		let ctest = Object.assign({},user);
+		console.log(clone);
+		console.log(user.sizes === clone.sizes);
+		console.log(user.sizes === ctest.sizes);
+
+		let deep = _.cloneDeep(user);
+		console.log(deep);
+		console.log(user.sizes === deep.sizes);
+		// 对象
+		let calculator = {
+			num1: 0,
+			num2: 0,
+		  read: function() {
+		  	this.num1 = +prompt('this is num1');
+		  	this.num2 = +prompt('this is num2');
+		  },
+		  sum: function() {
+		  	return this.num1 + this.num2;
+		  },
+		  mul: function() {
+		  	return this.num1 * this.num2;
+		  }
+		};
+
+		calculator.read();
+		console.log( calculator.sum() );
+		console.log( calculator.mul() );
+	</script>
+</body>
+</html>

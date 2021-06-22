@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS动画</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background: red;
+			animation-name: example;
+			animation-duration: 4s;
+			animation-iteration-count: 3;
+		}
+		@keyframes example {
+			from { background: red; }
+			to { background: yellow; }
+		}
+		/*
+			简写动画属性顺序
+			animation-name
+			animation-duration
+			animation-timing-function
+			animation-delay
+			animation-iteraion-count
+			animation-direction
+		*/
+	</style>
+</head>
+<body>
+	<p><b>注释：</b>本例在 Internet Explorer 9 以及更早的版本中无效。</p>
+
+	<div></div>
+
+	<p><b>注释：</b>当动画结束后，会变回最初的样式。</p>
+</body>
+</html>

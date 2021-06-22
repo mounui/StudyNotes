@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>canvas</title>
+</head>
+<body>
+	<section>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+			  <polygon points="100,10 40,180 190,60 10,60 160,180"
+			  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+			</svg>
+		</div>
+		<canvas id="myCanvas" width="800" height="800"></canvas>
+	</section>
+	<script>
+		var c=document.getElementById("myCanvas");
+		var cxt=c.getContext("2d");
+		cxt.fillStyle="#ff0000";
+		// cxt.fillRect(80,80,150,150);
+		// cxt.fillCircle(0,0,80);
+		cxt.moveTo(20,20);
+		cxt.lineTo(160,60);
+		cxt.lineTo(20,60);
+		cxt.stroke();
+
+		cxt.beginPath();
+		cxt.arc(150,100,50,20,Math.PI*2,true);
+		cxt.closePath();
+		cxt.fill();
+
+		cxt.fillStyle="#fff";
+		cxt.beginPath();
+		cxt.arc(150,120,10,0,Math.PI*2,true);
+		cxt.closePath();
+		cxt.fill();
+	</script>
+</body>
+</html>

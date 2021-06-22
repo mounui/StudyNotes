@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css盒模型</title>
+	<style>
+		.box1 {
+			width: 200px;
+			height: 200px;
+			border: 0;
+			background-color: #ccc;
+			margin-top: 20px;
+		}
+		.box2 {
+			background-color: pink;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 0;
+		}
+		.box3 {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2>css外边距合并</h2>
+		<div class="box1">
+			<div class="box2"></div>
+			<div class="box3">haha</div>
+		</div>
+	</section>
+</body>
+</html>

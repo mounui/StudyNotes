@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Flexbox布局</title>
+	<style>
+		.flex-container {
+			display: flex;
+			background-color: DodgerBlue;
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
+		.flex-container > div {
+			background-color: #f1f1f1;
+			width: 100px;
+			margin: 10px;
+			padding: 20px;
+			font-size: 30px;
+			line-height: 75px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div style="flex-grow: 1;">1</div>
+		<div style="flex-grow: 8;">2</div>
+		<div style="flex-shrink: 0;">3</div>
+		<div style="flex-basis: 200px;">4</div>
+		<div style="flex: 0 0 300px;">5</div>
+		<div>6</div>
+	</div>
+</body>
+</html>
